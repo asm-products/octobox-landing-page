@@ -1,0 +1,37 @@
+/*
+ * Site Name:
+ * Author:
+ *
+ * Stylesheet: 768 & Up
+ *
+ * This is the base tablet style.
+ */
+
+h1{
+  font-size: em(26);
+}
+
+#left_1, #left_2, #left_3{
+  left:em(-120);
+}
+#right_1, #right_2, #right_3{
+  right:em(-120);
+}
+
+section{
+  li{
+    margin-left: 0;
+    margin-right: 0;
+    @include span-columns(8);
+    @include shift(1.8)
+  }
+}
+
+#octobox-interface, #finder-interface{
+  width: 100%;
+  background-size: auto;
+}
+
+#features-octobox .container, #features-dropbox .container{
+  padding-bottom: em(459);
+}

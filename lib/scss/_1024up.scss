@@ -1,0 +1,83 @@
+/*
+ * Site Name:
+ * Author:
+ *
+ * Stylesheet: 1024 & Up
+ *
+ * This is the average viewing window. So Desktops, Laptops, and
+ * in general anyone not viewing on a mobile device or a tablet. Here's where
+ * you can add resource intensive styles.
+ */
+
+h1{
+  font-size: em(30);
+}
+
+section#features-dropbox, section#features-octobox{
+  ul{
+    @include shift(1);
+    @include span-columns(5);
+  }
+  li{
+    margin: 1em 0;
+    @include span-columns(12);
+    &.first{
+      @include shift(0.75);
+    }
+  }
+}
+
+section#features-dropbox{
+  ul{
+    @include shift(6);
+  }
+  li{
+    margin-right: 0;
+  }
+}
+#octobox-interface, #finder-interface{
+  top: em(285);
+  width: em(659);
+  background-size: auto;
+}
+#octobox-interface{
+  right: em(-180);
+  left: auto;
+}
+#finder-interface {
+  left: em(-180);
+  right: auto;
+}
+#features-octobox .container, #features-dropbox .container{
+  padding-bottom: 3em;
+}
+
+section#use-ideas{
+  li{
+    margin: 1.5em 0;
+    @include span-columns(4.75);
+    &.first{
+      @include shift(1.25);
+    }
+  }
+}
+
+
+// Interested
+#interested{
+  @include row();
+
+  h2{
+    @include span-columns(5.7);
+    @include shift(1.1);
+    float: left;
+    text-align: left;
+    span{
+      padding: 0;
+    }
+  }
+  .signup-form{
+    float: right;
+    @include span-columns(4);
+  }
+}

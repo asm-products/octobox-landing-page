@@ -1,0 +1,64 @@
+/*
+ * Site Name:
+ * Author:
+ *
+ * Stylesheet: 481 & Up
+ *
+ */
+
+// Header
+#site-nav ul{
+  float: right;
+}
+
+
+
+#left_1, #left_2, #left_3{
+  left:em(-250);
+}
+#right_1, #right_2, #right_3{
+  right:em(-250);
+}
+
+
+// Sections
+section{
+  header{
+    padding-top: 4.3em;
+
+    p{
+      padding: 0 13%;
+    }
+  }
+  li{
+    padding-right: 0;
+  }
+}
+
+#octobox-interface, #finder-interface{
+  width: 100%;
+  background-size: 80% auto;
+}
+#features-octobox .container, #features-dropbox .container{
+  padding-bottom: 50%;
+}
+
+// Footer
+.footer{
+  font-size: em(16);
+
+  .twitter-logo{
+    @include shift(1);
+  }
+  #copyright{
+    margin-right: (1/12)*100%;
+  }
+}
+
+// Signup form
+.signup-form{
+  width:em(360);
+  input[type="email"]{
+    width:em(270);
+  }
+}

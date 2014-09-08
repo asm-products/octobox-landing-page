@@ -1,0 +1,27 @@
+/*
+ * Site Name:
+ * Author:
+ *
+ * Stylesheet: IE Styles
+ * These styles are all loaded for IE so that they get the regular
+ * view since the older versions don't understand Media Queries.
+ */
+
+/* import reset */
+@import "../../bower_components/normalize.css/normalize.css";
+/* import bourbon */
+@import "../../bower_components/bourbon/dist/bourbon";
+/* import neat */
+@import "../../bower_components/neat/app/assets/stylesheets/neat";
+
+/* import settings */
+@import "settings";
+
+/* import styles on top of base */
+@import "base";
+@import "481up";
+@import "768up";
+@import "1024up";
+
+/* import print */
+@import "print";

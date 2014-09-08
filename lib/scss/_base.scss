@@ -1,0 +1,452 @@
+/*
+ * Site Name:
+ * Author:
+ *
+ * Stylesheet: Base Mobile Styles
+ * 4 of 12 columns
+ *
+ * Be light and don't over style since everything here will be
+ * loaded by mobile devices. You want to keep it as minimal as
+ * possible.
+ *
+ */
+
+h1, h2, h3, h4, h5{
+  font-family: $sans-serif;
+  line-height: 1.3em;
+}
+h1{
+  font-size: em(24);
+  font-weight: 300;
+}
+h2{
+  font-size: em(22);
+  font-weight: 500;
+}
+h3{
+  font-size: em(18);
+  font-weight: 500;
+}
+
+body{
+  color: $black;
+  font-family: $sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+.container{
+  @include outer-container;
+}
+::selection {
+  background: #FB823D;
+  color: $white;
+  }
+::-moz-selection {
+  background: #FB823D;
+  color: $white;
+}
+
+// Header
+  .header{
+    min-height: em(650);
+    border-bottom: 1px solid $mid-gray;
+    background: url('../images/bg_feat.png') repeat-x top;
+    position: relative;
+    overflow: hidden;
+
+    > *{
+      margin: 0 auto;
+      text-align: center;
+    }
+  }
+  #site-nav{
+    @include clearfix;
+    @include outer-container;
+
+    ul{
+      list-style: none;
+      display:inline-table;
+    }
+    li{
+      float: left;
+      margin: 1.5em 2.5em 1em 0;
+      display:inline;
+    }
+    a{
+      font-style: italic;
+      font-size: em(18);
+      color: lighten($gray, 5%);
+      text-decoration: none;
+
+      @include transition (all 0.2s ease-in-out);
+
+      &:hover{
+        color: lighten($gray, 20%);
+      }
+    }
+  }
+  h1{
+    width:85%;
+  }
+  .twitter-logo{
+    width: 24px;
+    height: 21px;
+    display: block;
+
+    @include hide-text;
+    @include retina-image('../images/twitter', 24px 21px);
+    @include transition (all 0.2s ease-in-out);
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  #site-logo{
+    width: 114px;
+    height: 112px;
+    display: block;
+    margin-bottom: 1.6em;
+
+    &:hover{
+      opacity: 0.8;
+    }
+  }
+  .no-svg #site-logo{
+    svg{
+      display: none;
+    }
+    @include hide-text;
+    @include retina-image('../images/logo', 114px 112px);
+  }
+
+  #intro{
+    font-size: em(40);
+    font-weight: 300;
+    line-height: 1.1;
+    margin-bottom: 1.5em;
+
+    span{
+      display: block;
+      font-size: 0.45em;
+      color: lighten($gray, 20%);
+      font-weight: 500;
+      font-style: italic;
+    }
+  }
+  #beta-invite{
+    font-size: em(15);
+    line-height: em(20);
+    color: lighten($gray, 10%);
+    margin-bottom: 1.3em;
+    margin-top: 3em;
+
+    span{
+      display: block;
+      font-style: italic;
+      color: lighten($gray, 25%);
+    }
+  }
+
+  .signup-form{
+    z-index: 2;
+    position: relative;
+    width:em(300);
+    height: em(50);
+
+    input{
+      border-radius: 4px;
+    }
+
+    input[type="email"]{
+      position: absolute;
+      left: 0;
+      z-index: 0;
+      width:em(200);
+      border: 1px solid $mid-gray;
+      background: $light-gray;
+      font-size: em(15);
+      font-style: italic;
+      padding: 1em;
+    }
+    input[type="submit"]{
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: 1;
+      width: em(120);
+      background: $green;
+      border:none;
+      text-transform: uppercase;
+      font-weight: 500;
+      padding: 1em - em(2);
+      border-bottom: 3px solid $dark-green;
+      color: $white;
+      text-shadow: 0px 2px 0px $dark-green;
+      @include transition (all 0.2s ease-in-out);
+
+      &:hover{
+        background: lighten($green, 5%);
+      }
+    }
+  }
+  a.button{
+    // position: absolute;
+    // right: 0;
+    // top: 0;
+    z-index: 1;
+    background: $green;
+    border:none;
+    text-align: center;
+    display: block;
+    width: em(180);
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 1em em(20);
+    margin: em(25) auto;
+    border-bottom: 3px solid $dark-green;
+    border-radius: 4px;
+    color: $white;
+    text-shadow: 0px 2px 0px $dark-green;
+    @include transition (all 0.2s ease-in-out);
+
+    &:hover{
+      background: lighten($green, 5%);
+    }
+  }
+
+// Icons
+#left_1, #left_2, #left_3, #right_1, #right_2, #right_3{
+  position: absolute;
+  bottom: 0;
+  height: em(389);
+  z-index: 0;
+}
+#left_1, #left_2, #left_3{
+  left:em(-250);
+  width: em(471);
+}
+#right_1, #right_2, #right_3{
+  right:em(-250);
+  width: em(381);
+}
+#left_1{
+  background: url('../images/icons/left_1.png');
+}
+#left_2{
+  background: url('../images/icons/left_2.png');
+}
+#left_3{
+  background: url('../images/icons/left_3.png');
+}
+#right_1{
+  background: url('../images/icons/right_1.png');
+}
+#right_2{
+  background: url('../images/icons/right_2.png');
+}
+#right_3{
+  background: url('../images/icons/right_3.png');
+}
+// Sections
+
+section{
+  padding-bottom: 0;
+  overflow: hidden;
+
+  .container{
+    position: relative;
+  }
+
+  header{
+    @include row();
+    margin: 0 9% 2em;
+    padding-bottom: 2em;
+    padding-top: 2.3em;
+    text-align: center;
+    border-bottom: 1px solid $mid-gray;
+    h2{
+      margin-bottom: 0;
+    }
+    p{
+      padding: 0 1em;
+    }
+  }
+  p{
+    color: lighten($black, 25%);
+    font-size: em(15);
+    line-height: 1.7;
+  }
+  h3{
+    margin-bottom: 0.3em;
+  }
+  ul{
+    padding: 0;
+  }
+  li{
+    margin: 1em 1.5em;
+    padding-right: em(15);
+    @include span-columns(11);
+    padding-left: em(110);
+    background-repeat: no-repeat;
+    background-position: 0.5em 0.85em;
+  }
+  li#feature-collections{
+    background-position: 0.5em 1.2em;
+    @include retina-image('../images/features/tags', 80px 70px);
+  }
+  li#feature-markdown{
+    background-position: 0.7em 2em;
+    @include retina-image('../images/features/markdown', 80px 37px);
+  }
+  li#feature-octobot{
+    @include retina-image('../images/features/octobot', 80px 80px);
+  }
+  li#feature-share{
+    background-position: 0 0.85em;
+    @include retina-image('../images/features/share', 90px 79px);
+  }
+  li#feature-files{
+    background-position: 0.5em 1.2em;
+    @include retina-image('../images/features/drive', 85px 62px);
+  }
+  li#feature-backup{
+    background-position: 0.4em 1.2em;
+    @include retina-image('../images/features/revisions', 79px 80px);
+  }
+}
+
+// Ocotobox Interface
+#octobox-interface, #finder-interface{
+  bottom: -2em;
+  left: 0;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-size: 80% auto;
+  position: absolute;
+}
+#features-octobox .container, #features-dropbox .container{
+  padding-bottom: 50%;
+}
+#octobox-interface{
+  height: em(459);
+  background-image: url('../images/octobox.png');
+  z-index: 2;
+}
+#finder-interface{
+  height: em(459);
+  background-image: url('../images/finder.png');
+  z-index: 4;
+}
+section#features-dropbox{
+  background: $light-gray;
+  z-index: 3;
+}
+section#use-ideas{
+  background-color: #395CA3;
+  background-image: url('../images/bg_ideas.png');
+  background-repeat: none;
+  background-size: 100% 100%;
+  background-size: cover;
+  color: $white;
+  margin-bottom: 0.5em;
+  z-index: 5;
+  padding-bottom: 4em;
+
+  header{
+    padding-top: 3.6em;
+    border-bottom: 1px solid #637CB3;
+  }
+  h3{
+    font-weight: 400;
+  }
+  p{
+    color: darken($light-gray, 15%);
+  }
+
+  li{
+    padding-left: em(100);
+    padding-right: em(15);
+    background-repeat: no-repeat;
+    background-position: 0.2em 0.85em;
+  }
+  li#use-inspiration{
+    @include retina-image('../images/ideas/inspiration', 80px 80px);
+  }
+  li#use-research{
+    @include retina-image('../images/ideas/research', 80px 80px);
+  }
+  li#use-gtd{
+    background-position: -0.2em 0.85em;
+    @include retina-image('../images/ideas/gtd', 80px 80px);
+  }
+  li#use-snippets{
+    @include retina-image('../images/ideas/snippets', 80px 80px);
+  }
+}
+
+// Interested
+#interested{
+  @include clearfix;
+  padding:1.5em 0 1.5em;
+
+  h2{
+    text-align: center;
+    span{
+      display: block;
+      font-size: 0.68em;
+      line-height: 1.2;
+      font-style: italic;
+      color: $gray;
+      padding: 0 2em;
+    }
+    margin-bottom: 1.2em;
+  }
+  .signup-form{
+    margin:0.83em auto;
+    float: none;
+    @include clearfix;
+  }
+  a.button{
+    float: right;
+    margin: em(5) 0 0 0;
+  }
+}
+
+.footer{
+  background: $light-gray;
+  padding: 3em 1em;
+  color: lighten($gray, 15%);
+  font-size: em(13);
+  line-height: 1.7;
+  .container{
+    position: relative;
+  }
+  a{
+    color: darken($gray, 20%);
+    text-decoration: none;
+  }
+  p{
+    margin: 0;
+  }
+  .twitter-logo{
+    float: left;
+    z-index: 6;
+    position: absolute;
+    left: 0;
+    display: block;
+  }
+  #site-credit{
+    display: block;
+    position: absolute;
+    text-align: center;
+    z-index: 0;
+    left: 0;
+    right: 0;
+  }
+  #copyright{
+    display: block;
+    float: right;
+    text-align: right;
+  }
+}

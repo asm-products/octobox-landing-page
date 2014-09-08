@@ -1,0 +1,13 @@
+{
+  "name": "HTML5 Starter",
+  "version": "0.1",
+  "dependencies": {
+    "bourbon": "latest",
+    "neat": "latest",
+    "jquery": "1.x",
+    "normalize.css": "latest",
+    "modernizr": "~2.7.2",
+    "animate.css": "~3.1.0",
+    "WOW": "~0.1.6"
+  }
+}
